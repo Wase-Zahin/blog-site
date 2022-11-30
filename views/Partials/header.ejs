@@ -4,21 +4,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Home</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-
-        body {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 0 20px;
-            font-family: Ubuntu;
-        }
-
-        p, h1, h2, h3, a, ul {
-            margin: 0;
-            padding: 0;
-            text-decoration: none;
-            color: #222;
-        }
-    </style>
 </head>
+
+<body>
+    <h1 class="header">BLOG!</h1>
+    <div class="nav">
+        <h3>A simple blog site</h3>
+        <%- include('./nav.ejs') %>
+    </div>
+    <hr>
+</body>

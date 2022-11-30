@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    font-family: Ubuntu;
+}
+
+hr {
+    width: 100%;
+}
+p,
+h1,
+h2,
+h3,
+a,
+label,
+ul {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #222;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav>nav>ul {
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+}
+
+.nav>nav>ul>li:hover {
+    cursor: pointer;
+}
+
+main {
+    padding: 2.5rem;
+}
+
+main>h2 {
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+}
+
+main>form {
+    padding: 2rem;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
+
+main>form>input {
+    display: flex;
+    padding: 0.4rem;
+    width: 25rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+footer {
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+}
