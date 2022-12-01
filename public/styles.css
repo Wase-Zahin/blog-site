@@ -26,6 +26,10 @@ ul {
     color: #222;
 }
 
+.header {
+    margin: 1rem 0;
+}
+
 .nav {
     display: flex;
     justify-content: space-between;
@@ -42,6 +46,9 @@ ul {
 }
 
 main {
+    height: fit-content;
+    width: fit-content;
+    margin: 0 auto;
     padding: 2.5rem;
 }
 
@@ -53,17 +60,19 @@ main>h2 {
 
 main>form {
     padding: 2rem;
-    width: fit-content;
-    height: fit-content;
-    margin: auto;
+    box-sizing: border-box;
 }
 
-main>form>input {
-    display: flex;
+main>form>input, main>form>textarea {
+    box-sizing: border-box;
+    width: 100%;
     padding: 0.4rem;
-    width: 25rem;
     margin-bottom: 1rem;
     margin-top: 0.5rem;
+}
+
+main>form>textarea {
+    height: 10rem;
 }
 
 footer {

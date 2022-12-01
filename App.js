@@ -1,6 +1,9 @@
 const express = require('express');
 const App = express();
 const path = require('path');
+const mongoose = require('mongoose');
+const dbURI = 'mongodb+srv://Zahin:<4hqBwkdQhhPw7i3n>@cluster0.fbu8nyb.mongodb.net/dummy?retryWrites=true&w=majority';
+mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true});
 
 App.listen(3000);
 App.set('view engine', 'ejs');
