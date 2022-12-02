@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@font-face {
+    font-family: "Noto Serif";
+    src: url("./NotoSerif-Regular.ttf");
+}
 
 body {
     display: flex;
@@ -7,12 +10,13 @@ body {
     max-width: 1200px;
     margin: 20px auto;
     padding: 0 20px;
-    font-family: Ubuntu;
+    font-family: "Noto Serif";
 }
 
 hr {
     width: 100%;
 }
+
 p,
 h1,
 h2,
@@ -27,6 +31,7 @@ ul {
 }
 
 .header {
+    font-size: 2.6rem;
     margin: 1rem 0;
 }
 
@@ -46,9 +51,6 @@ ul {
 }
 
 main {
-    height: fit-content;
-    width: fit-content;
-    margin: 0 auto;
     padding: 2.5rem;
 }
 
@@ -63,7 +65,8 @@ main>form {
     box-sizing: border-box;
 }
 
-main>form>input, main>form>textarea {
+main>form>input,
+main>form>textarea {
     box-sizing: border-box;
     width: 100%;
     padding: 0.4rem;
@@ -79,4 +82,48 @@ footer {
     height: fit-content;
     width: fit-content;
     margin: auto;
+}
+
+.blogsHeader {
+    padding-bottom: 2rem;
+}
+
+.blogs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1fr 300px));
+    gap: 2.5rem;
+}
+
+.single h3 {
+    font-size: 1.4rem;
+}
+.single h3:hover {
+    transform: scale(1.01,1.01);
+    color: crimson;
+}
+
+.single {
+    display: flex;
+    padding-left: 2rem;
+    border-left: 6px solid crimson;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete {
+    padding: 0.6rem;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: crimson;
+}
+
+.delete:hover {
+    transform: scale(1.1,1.1);
+    cursor: pointer;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
 }
