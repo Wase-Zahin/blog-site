@@ -19,21 +19,11 @@ App.get('/add-blog', (req, res) => {
         title: 'new blog 2',
         snippet: 'about my new blog',
         body: 'more about my new blog'
-    })
+    }) 
 
     blog.save()
         .then((result) => {
             res.send(result)
-        })
-        .catch((err) => {
-            console.log(err);
-        })
-})
-
-App.get('/all-blogs', (req, res) => {
-    Blog.find()
-        .then((result) => {
-            res.send(result);
         })
         .catch((err) => {
             console.log(err);
@@ -50,45 +40,7 @@ App.get('/', (req, res) => {
 });
 
 // show blogs in homepage
-App.get('/blogs', (req, res) => {
-    Blog.find().sort({ createdAt: -1 })
-        .then((result) => {
-            res.render('index', { title: 'All Blogs', blogs: result })
-        })
-        .catch((err) => {
-            console.log(err);
-        })
-})
 
-App.post('/blogs', (req, res) => {
-    const blog = new Blog(req.body);
-
-    blog.save()
-        .then((result) => {
-            res.redirect('/blogs');
-        })
-        .catch((err) => console.log(err));
-})
-
-App.get('/blogs/:id', (req, res) => {
-    const id = req.params.id;
-    Blog.findById(id)
-        .then(result => {
-            res.render('details', { blog: result, title: 'Blog Details' });
-        })
-        .catch(err => {
-            console.log(err);
-        })
-})
-
-App.delete('/blogs/:id', (req, res) => {
-    const id = req.params.id;
-    Blog.findByIdAndDelete(id)
-        .then(result => {
-            res.json({ redirect: '/blogs' })
-        })
-        .catch(err => console.log(err));
-})
 
 App.get('/about', (req, res) => {
     res.render('about');
